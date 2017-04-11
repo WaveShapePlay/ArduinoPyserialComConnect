@@ -1,3 +1,6 @@
+# WaveShapePlay
+# Find a detailed youtube tutorial for the Arduino Com Connection Code at: https://youtu.be/DJD28uK5qIk
+
 import serial.tools.list_ports
 
 def get_ports():
