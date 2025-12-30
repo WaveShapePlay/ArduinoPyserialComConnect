@@ -1,15 +1,21 @@
-import serial
+# Standard Imports
 from tkinter import *
-import tkinter as tk 
+import tkinter as tk
 
-commPort = '/dev/cu.usbmodemB081849E500C2'
-ser = serial.Serial(commPort, baudrate = 9600, timeout = 1)
+# Local Imports
+from find_arduino_v2 import ConnectArduino
+
+# Call methods to connect to the Arduino board
+connect_to_arduino = ConnectArduino()
+connect_to_arduino.get_ports()
+connect_to_arduino.find_arduino()
+connect_to_arduino.connect_arduino()
 
 def turnOnLED():
-    ser.write(b'o')
+    connect_to_arduino.ser.write(b'o')
 
 def turnOffLED(): 
-    ser.write(b'x')
+    connect_to_arduino.ser.write(b'x')
 
 # creating tkinter window 
 root = Tk() 
@@ -21,5 +27,5 @@ btn_On.grid(row=0, column=0)
 btn_Off = tk.Button(root, text="Turn Off", command=turnOffLED)
 btn_Off.grid(row=0, column=1)
 
-root.geometry("350x350")
+root.geometry("250x250")
 root.mainloop()
