@@ -1,23 +1,24 @@
 # Standard Imports
-from tkinter import *
 import tkinter as tk
 
 # Local Imports
 from find_arduino_v2 import ConnectArduino
 
-# Call methods to connect to the Arduino board
+# Connect to the Arduino board
 connect_to_arduino = ConnectArduino()
 connect_to_arduino.get_ports()
 connect_to_arduino.find_arduino()
 connect_to_arduino.connect_arduino()
 
 def turnOnLED():
+    # Send command to turn on-board LED on
     connect_to_arduino.ser.write(b'o')
 
 def turnOffLED(): 
+    # Send command to turn on-board LED off
     connect_to_arduino.ser.write(b'x')
 
-# creating tkinter window 
+# Create tkinter window, add title, on/off buttons, and set size of GUI.
 root = Tk() 
 root.title('Blink GUI')
 

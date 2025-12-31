@@ -1,7 +1,7 @@
 # Standard Import
 import time
 
-# Third Part Import
+# Third Party Import
 import serial
 import serial.tools.list_ports
 
@@ -11,7 +11,7 @@ class ConnectArduino:
     
     This class handles:
     - Listing available serial ports
-    - Searching for Arduino-related keywords
+    - Searching for board related keywords - keyword must match connection description
     - Connecting to the matching port
     """
 
