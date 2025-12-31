@@ -19,7 +19,7 @@ def turnOffLED():
     connect_to_arduino.ser.write(b'x')
 
 # Create tkinter window, add title, on/off buttons, and set size of GUI.
-root = Tk() 
+root = tk.Tk() 
 root.title('Blink GUI')
 
 btn_On= tk.Button(root, text="Turn On", command=turnOnLED)

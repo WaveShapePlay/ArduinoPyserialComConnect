@@ -97,4 +97,3 @@ if __name__ == "__main__":
         connect_to_arduino.ser.write(b'o')
     except:
         print("Error in connection or detection")
-    '''
