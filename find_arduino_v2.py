@@ -5,6 +5,11 @@ import time
 import serial
 import serial.tools.list_ports
 
+# -----------------------------------------------------------------------------
+# This script provides a class that will return the results of automatic 
+# Arduino detection using PySerial. If the file is ran as a stand alone 
+# script the test/debug code will be ran, otherwise it can be imported for use.
+# -----------------------------------------------------------------------------
 
 class ConnectArduino:
     """ Automatically find and connect to Arduino to communicate through the PySerial module. 
@@ -64,11 +69,11 @@ class ConnectArduino:
 
 
 
-# ---------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Debug / Test Code
 # This block only runs when Python script is ran directly as a stand alone file.
 # It will not run when imported by another script.
-# ---------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 if __name__ == "__main__":
     """
